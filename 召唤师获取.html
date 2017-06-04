@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../框架库/jQuery/jquery-1.11.1.min.js"></script>
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+	<img src="" alt="">
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	$.ajax({
+	url:"http://ddragon.leagueoflegends.com/cdn/6.24.1/data/en_US/summoner.json",
+	success:function (data) {
+		urls = [];
+		for (var key in data.data){
+			var img = {
+				info:key,
+				url:data.data[key]
+			}
+			urls.push(img)
+		}
+			for (var i = 0; i < $("img").length; i++) {
+				$("img").eq(i).attr("src","http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/"+urls[i].info+".png").attr("alt","urls[i].info+");
+			}
+	}
+	})
+</script>
+</html>
