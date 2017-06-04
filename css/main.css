@@ -1,0 +1,426 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "微软雅黑";
+}
+
+ul, li {
+  list-style-type: none;
+}
+
+.container {
+  height: 900px;
+  width: 1730px;
+  margin: 0 auto;
+}
+.container > .top {
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.container > .top .blue-team {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 10px;
+}
+.container > .top .blue-team > li {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #a3cfec;
+  border: 2px solid #3480c6;
+  margin: 5px 0px;
+  padding: 2px 6px;
+}
+.container > .top .blue-team > li .items {
+  float: left;
+  height: 100%;
+  width: 190px;
+  margin-right: 6px;
+}
+.container > .top .blue-team > li .items ul {
+  height: 100%;
+  padding: 6px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container > .top .blue-team > li .items ul li {
+  width: 33.3333%;
+  padding: 3px;
+}
+.container > .top .blue-team > li .items ul li img {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.container > .top .blue-team > li .data-box {
+  float: left;
+  height: 100%;
+  padding: 8px 0px;
+  margin: 0px 6px;
+}
+.container > .top .blue-team > li .data-box .data {
+  height: 100%;
+  width: 170px;
+  border: 2px solid #3480c6;
+  border-radius: 5px;
+  padding-left: 28px;
+  padding-top: 14px;
+  font-size: 24px;
+}
+.container > .top .blue-team > li .kda {
+  float: left;
+  height: 100%;
+  width: 250px;
+  padding: 3px 5px;
+}
+.container > .top .blue-team > li .kda .kda-info {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: top;
+}
+.container > .top .blue-team > li .kda .king {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 0px;
+  text-align: center;
+  line-height: 30px;
+}
+.container > .top .blue-team > li .kda .king .king-item {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0px 3px;
+  background-color: #b01d4d;
+  border-radius: 3px;
+  color: #fff;
+}
+.container > .top .blue-team > li .kda .dps p {
+  text-align: right;
+}
+.container > .top .blue-team > li .kda .dps .dps-box {
+  border: 2px solid #fff;
+  height: 25px;
+  background-color: #FFF;
+}
+.container > .top .blue-team > li .kda .dps .dps-box .dps-num {
+  background-color: #ee5a52;
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+.container > .top .blue-team > li .sumer {
+  float: left;
+  width: 200px;
+  height: 100%;
+  padding: 6px 0px;
+  margin-left: 8px;
+}
+.container > .top .blue-team > li .sumer .top {
+  height: 80%;
+}
+.container > .top .blue-team > li .sumer .top .skill {
+  padding-left: 3px;
+  float: left;
+  width: 60%;
+  height: 100%;
+}
+.container > .top .blue-team > li .sumer .top .skill img {
+  width: 50px;
+  border-radius: 6px;
+}
+.container > .top .blue-team > li .sumer .top .skill .left {
+  width: 50%;
+  float: left;
+}
+.container > .top .blue-team > li .sumer .top .skill .left img {
+  display: block;
+  margin-top: 50%;
+}
+.container > .top .blue-team > li .sumer .top .skill .right {
+  float: right;
+  width: 50%;
+}
+.container > .top .blue-team > li .sumer .top .skill .right > img {
+  display: block;
+}
+.container > .top .blue-team > li .sumer .top .skill .right > img:first-child {
+  margin-bottom: 3px;
+}
+.container > .top .blue-team > li .sumer .top .sumer-icon {
+  float: right;
+  widows: 40%;
+  height: 100%;
+}
+.container > .top .blue-team > li .sumer .top .sumer-icon > img {
+  width: 80px;
+  display: block;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 3px solid #3480c6;
+}
+.container > .top .blue-team > li .sumer > p {
+  height: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+}
+.container > .top .red-team {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 10px;
+}
+.container > .top .red-team > li {
+  margin: 5px 0px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #e2b6b3;
+  border: 2px solid #ee5a52;
+}
+.container > .top .red-team > li .items {
+  float: left;
+  height: 100%;
+  width: 190px;
+  margin-left: 6px;
+}
+.container > .top .red-team > li .items ul {
+  height: 100%;
+  padding: 6px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.container > .top .red-team > li .items ul li {
+  width: 33.3333%;
+  padding: 3px;
+}
+.container > .top .red-team > li .items ul li img {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.container > .top .red-team > li .data-box {
+  float: left;
+  height: 100%;
+  padding: 8px 0px;
+  margin: 0px 6px;
+}
+.container > .top .red-team > li .data-box .data {
+  height: 100%;
+  width: 170px;
+  border: 2px solid #ee5a52;
+  border-radius: 5px;
+  padding-left: 28px;
+  padding-top: 14px;
+  font-size: 24px;
+}
+.container > .top .red-team > li .kda {
+  float: left;
+  height: 100%;
+  width: 250px;
+  padding: 3px 5px;
+}
+.container > .top .red-team > li .kda .kda-info {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 40px;
+  text-align: center;
+  vertical-align: top;
+}
+.container > .top .red-team > li .kda .king {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8px 0px;
+  text-align: center;
+  line-height: 30px;
+}
+.container > .top .red-team > li .kda .king .king-item {
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 0px 3px;
+  background-color: #b01d4d;
+  border-radius: 3px;
+  color: #fff;
+}
+.container > .top .red-team > li .kda .dps p {
+  text-align: left;
+}
+.container > .top .red-team > li .kda .dps .dps-box {
+  border: 2px solid #fff;
+  height: 25px;
+  background-color: #FFF;
+}
+.container > .top .red-team > li .kda .dps .dps-box .dps-num {
+  background-color: #ee5a52;
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.container > .top .red-team > li .sumer {
+  float: left;
+  width: 200px;
+  height: 100%;
+  padding: 6px 0px;
+  margin-left: 8px;
+}
+.container > .top .red-team > li .sumer .top {
+  height: 80%;
+}
+.container > .top .red-team > li .sumer .top .skill {
+  padding-left: 3px;
+  float: right;
+  width: 60%;
+  height: 100%;
+}
+.container > .top .red-team > li .sumer .top .skill img {
+  width: 50px;
+  border-radius: 6px;
+}
+.container > .top .red-team > li .sumer .top .skill .right {
+  width: 50%;
+  float: right;
+}
+.container > .top .red-team > li .sumer .top .skill .right img {
+  display: block;
+  margin-top: 50%;
+}
+.container > .top .red-team > li .sumer .top .skill .left {
+  float: left;
+  width: 50%;
+}
+.container > .top .red-team > li .sumer .top .skill .left > img {
+  display: block;
+  margin-left: 3px;
+}
+.container > .top .red-team > li .sumer .top .skill .left > img:first-child {
+  margin-bottom: 3px;
+}
+.container > .top .red-team > li .sumer .top .sumer-icon {
+  float: left;
+  widows: 40%;
+  height: 100%;
+}
+.container > .top .red-team > li .sumer .top .sumer-icon > img {
+  width: 80px;
+  display: block;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 3px solid #ee5a52;
+}
+.container > .top .red-team > li .sumer > p {
+  height: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  line-height: 26px;
+}
+.container > .bot {
+  height: 50px;
+  margin-top: 6px;
+}
+.container > .bot > div {
+  width: 855px;
+  height: 100%;
+}
+.container > .bot .left {
+  float: left;
+  border: 2px solid #3480c6;
+  padding: 6px;
+}
+.container > .bot .left .l-size {
+  float: left;
+  line-height: 34px;
+}
+.container > .bot .left .l-size img {
+  vertical-align: middle;
+}
+.container > .bot .left .l-size span {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+  margin: 0px 4px;
+}
+.container > .bot .left .r-size {
+  float: right;
+  line-height: 34px;
+}
+.container > .bot .left .r-size img {
+  vertical-align: middle;
+}
+.container > .bot .left .r-size span {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+  margin: 0px 4px;
+}
+.container > .bot .right {
+  float: right;
+  border: 2px solid #ee5a52;
+  padding: 6px;
+}
+.container > .bot .right .l-size {
+  float: left;
+  line-height: 34px;
+}
+.container > .bot .right .l-size img {
+  vertical-align: middle;
+}
+.container > .bot .right .l-size span {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+  margin: 0px 4px;
+}
+.container > .bot .right .r-size {
+  float: right;
+  line-height: 34px;
+}
+.container > .bot .right .r-size img {
+  vertical-align: middle;
+}
+.container > .bot .right .r-size span {
+  display: inline-block;
+  font-size: 20px;
+  vertical-align: middle;
+  margin: 0px 4px;
+}

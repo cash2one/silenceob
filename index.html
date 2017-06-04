@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/champion.js"></script>
+    <script type="text/javascript" src="js/api.js"></script>
+    <script type="text/javascript" src="js/spells.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <input type="text" id="matchid" placeholder="2787783919" value="2787783919">
+        <input type="button" id="btn" value="开启">
+    </div>
+    <div class="container">
+        <div class="top">
+            <ul class="blue-team">
+                <li>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="left"><img src="images/ttt.png" alt=""></div>
+                                <div class="right spells">
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="left"><img src="images/ttt.png" alt=""></div>
+                                <div class="right spells">
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="left"><img src="images/ttt.png" alt=""></div>
+                                <div class="right spells">
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="left"><img src="images/ttt.png" alt=""></div>
+                                <div class="right spells">
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="kda">
+                    	<p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                    	<div class="dps">
+                    		<p>伤害量：15000</p>
+                    		<div class="dps-box">
+                    			<div class="dps-num"></div>
+                    		</div>
+                    	</div>
+                    </div>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="left"><img src="images/ttt.png" alt=""></div>
+                                <div class="right spells">
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                </li>
+            </ul>
+            <ul class="red-team">
+                <li>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="right"><img src="images/ttt.png" alt=""></div>
+                                <div class="left" spells>
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="right"><img src="images/ttt.png" alt=""></div>
+                                <div class="left" spells>
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="right"><img src="images/ttt.png" alt=""></div>
+                                <div class="left" spells>
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="right"><img src="images/ttt.png" alt=""></div>
+                                <div class="left" spells>
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <div class="sumer">
+                        <div class="top">
+                            <div class="skill">
+                                <div class="right"><img src="images/ttt.png" alt=""></div>
+                                <div class="left" spells>
+                                    <img src="images/ttt.png" alt="">
+                                    <img src="images/ttt.png" alt="">
+                                </div>
+                            </div>
+                            <div class="sumer-icon"><img src="images/ttt.png" alt=""></div>
+                        </div>
+                        <p>hide on bush</p>
+                    </div>
+                    <div class="kda">
+                        <p class="kda-info">10/5/30</p>
+                        <div class="king">
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                            <div class="king-item">推塔王</div>
+                        </div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="data-box">
+                        <div class="data">
+                            <p class="lv">等级：18</p>
+                            <p class="budao">补刀：200</p>
+                            <p class="money">金钱：18K</p>
+                        </div>
+                    </div>
+                    <div class="items">
+                        <ul>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                            <li>
+                                <img src="images/ttt.png" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="bot">
+            <div class="left">
+                <div class="l-size">
+                    <img src="images/icon-baron-b.png" alt="">
+                    <span>0</span>
+                    <img src="images/icon-dragon-b.png" alt="">
+                    <span>0</span>
+                    <img src="images/icon-tower-b.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="r-size">
+                    <span>0</span>|
+                    <span>0</span>|
+                    <span>0</span>
+                    <img src="images/icon-kda.png" alt="">
+                </div>
+            </div>
+            <div class="right">
+                <div class="r-size">
+                    <img src="images/icon-baron-r.png" alt="">
+                    <span>0</span>
+                    <img src="images/icon-dragon-r.png" alt="">
+                    <span>0</span>
+                    <img src="images/icon-tower-r.png" alt="">
+                    <span>0</span>
+                </div>
+                <div class="l-size">
+                    <img src="images/icon-kda.png" alt="">
+                    <span>0</span>|
+                    <span>0</span>|
+                    <span>0</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
