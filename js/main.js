@@ -1,6 +1,12 @@
 $(function() {
     var blueT = null;
     var redT = null;
+    $("#bgSetB").click(function () {
+        var bgcolor = $("#bgset").val();
+        $("body").css("backgroundColor",bgcolor);
+    })
+
+
     //点击按钮开始运行
     // $("#btn").click(function() {
     //     var matchid = $("#matchid").val();
@@ -22,6 +28,7 @@ $(function() {
             blue: 100,
             red: 200
         }
+        this.maxD = 0;
         this.size = team;
         this.team = t[team];
         this.data = data;
@@ -38,7 +45,11 @@ $(function() {
         init: function() {
             for (var i = 0; i < this.data.participants.length; i++) {
                 this.data.participants[i].index = i;
+                if (this.data.participants[i].stats.totalDamageDealtToChampions > this.maxD) {
+                    this.maxD = this.data.participants[i].stats.totalDamageDealtToChampions;
+                }
             }
+            console.log(this.maxD);
             this.getAll();
             this.check();
         },
@@ -49,17 +60,39 @@ $(function() {
                     "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/" + team.getChaName(team[team.role[i]][0].championId) + ".png");
                 //设置召唤师技能
                 var spells = $("." + team.size + "-team>li>.sumer>.top>.skill>.spells");
-                console.log(team.size);
                 $(spells[i]).children("img").eq(0).attr("src", "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/" + team.getSpell(team[team.role[i]][0]["spell1Id"]) + ".png");
                 $(spells[i]).children("img").eq(1).attr("src", "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/" + team.getSpell(team[team.role[i]][0]["spell2Id"]) + ".png");
                 //设置天赋基石
                 var masteryId = this.getMastery(team[team.role[i]][0].masteries);
                 var mastery = $("." + team.size + "-team>li>.sumer>.top>.skill>.mastery");
                 $(mastery[i]).children("img").attr("src", "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/mastery/"+masteryId+".png");
-                console.log(masteryId);
                 //设置召唤师姓名
                 $("." + team.size + "-team>li>.sumer>p").eq(i).text(this.data.participantIdentities[team[team.role[i]][0].index].player.summonerName);
-            }
+                //设置KDA数据
+                $("." + team.size + "-team>li>.kda>.kda-info").eq(i).text(team[team.role[i]][0].stats.kills +"/"+ team[team.role[i]][0].stats.deaths+"/"+team[team.role[i]][0].stats.assists);
+                //设置伤害量
+                $("." + team.size + "-team>li>.kda>.dps>p").eq(i).text("伤害量："+team[team.role[i]][0].stats.totalDamageDealtToChampions);
+                //设置dps进度条
+                $("." + team.size + "-team>li>.kda>.dps>.dps-box>.dps-num").eq(i).css("width",team[team.role[i]][0].stats.totalDamageDealtToChampions/this.maxD*80+"%");
+                var dateP = $("." + team.size + "-team>li>.data-box>.data");
+                //设置等级
+                $(dateP[i]).children("p").eq(0).text("等级："+team[team.role[i]][0].stats.champLevel);
+                //设置补刀
+                $(dateP[i]).children("p").eq(1).text("补刀："+team[team.role[i]][0].stats.minionsKilled);
+                //设置金钱
+                $(dateP[i]).children("p").eq(2).text("金钱："+parseInt(team[team.role[i]][0].stats.goldEarned/1000)+"K");
+                //设置装备
+                var items = $("." + team.size + "-team>li>.items>ul");
+                for (var j = 0; j < $(items).eq(i).children("li").length; j++) {
+                    var itemid = team[team.role[i]][0].stats["item"+j];
+                    if (itemid == 0) {
+                        continue;
+                    }
+                    $(items).eq(i).children("li").eq(j).children("img").attr("src","http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/"+itemid+".png")
+                }
+
+
+            }   
         },
         getChaName: function(id) {
             return champion.data[id].key;
