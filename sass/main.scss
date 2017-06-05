@@ -7,6 +7,18 @@
 ul,li{
 	list-style-type: none;
 }
+.top{
+	margin-top: 10px;
+	select{
+		width: 100px;
+	}
+	#tips{
+		position: absolute;
+		right: 0px;
+		top: 12px;
+		overflow: hidden;
+	}
+}
 .container{
 	height:900px;
 	width: 1730px;
@@ -83,7 +95,9 @@ ul,li{
 						margin:8px 0px;
 						text-align: center;
 						line-height: 30px;
+						flex-direction: row-reverse;
 						.king-item {
+							visibility:hidden;
 							height: 100%;
 							flex:1;
 							margin:0px 3px;
@@ -237,6 +251,7 @@ ul,li{
 						text-align: center;
 						line-height: 30px;
 						.king-item {
+							visibility:hidden;
 							height: 100%;
 							flex:1;
 							margin:0px 3px;

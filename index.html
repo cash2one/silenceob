@@ -14,10 +14,34 @@
 
 <body>
     <div class="top">
-        <input type="text" id="matchid" placeholder="2787783919" value="2787783919">
+        <input type="text" placeholder="输入你的apikey" id="apikey" value="RGAPI-af34bd57-c007-44b7-afcb-5cdfba565d0f">
+        <input type="button" value="确认APIKEY" id="getkey">
+        <input type="text" id="matchid" placeholder="2700360687" value="2700360687">
         <input type="button" id="btn" value="开启">
         <input type="text" id="bgset" placeholder="输入颜色，如：#123456">
         <input type="button" id="bgSetB" value="设置背景色">
+        选择改变的队伍
+        <select id="team">
+            <option value="blue">蓝色方</option>
+            <option value="red">红色方</option>
+        </select>
+        需要改变位置
+        <select id="role1">
+            <option value="top">上单位</option>
+            <option value="jug">打野位</option>
+            <option value="mid">中单位</option>
+            <option value="ad">AD位</option>
+            <option value="sup">辅助位</option>
+        </select>
+        <select id="role2">
+            <option value="top">上单位</option>
+            <option value="jug">打野位</option>
+            <option value="mid">中单位</option>
+            <option value="ad">AD位</option>
+            <option value="sup">辅助位</option>
+        </select>
+        <input type="button" id="change" value="换位">
+        <span id="tips">提示信息</span>
     </div>
     <div class="container">
         <div class="top">
@@ -285,18 +309,18 @@
                         </div>
                     </div>
                     <div class="kda">
-                    	<p class="kda-info">10/5/30</p>
+                        <p class="kda-info">10/5/30</p>
                         <div class="king">
                             <div class="king-item">推塔王</div>
                             <div class="king-item">推塔王</div>
                             <div class="king-item">推塔王</div>
                         </div>
-                    	<div class="dps">
-                    		<p>伤害量：15000</p>
-                    		<div class="dps-box">
-                    			<div class="dps-num"></div>
-                    		</div>
-                    	</div>
+                        <div class="dps">
+                            <p>伤害量：15000</p>
+                            <div class="dps-box">
+                                <div class="dps-num"></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="sumer">
                         <div class="top">
@@ -610,33 +634,33 @@
             <div class="left">
                 <div class="l-size">
                     <img src="images/icon-baron-b.png" alt="">
-                    <span>0</span>
+                    <span class="blueBaronk">0</span>
                     <img src="images/icon-dragon-b.png" alt="">
-                    <span>0</span>
+                    <span class="blueDragonk">0</span>
                     <img src="images/icon-tower-b.png" alt="">
-                    <span>0</span>
+                    <span class="blueTowerk">0</span>
                 </div>
                 <div class="r-size">
-                    <span>0</span>|
-                    <span>0</span>|
-                    <span>0</span>
+                    <span class="blueK">0</span>|
+                    <span class="blueD">0</span>|
+                    <span class="blueA">0</span>
                     <img src="images/icon-kda.png" alt="">
                 </div>
             </div>
             <div class="right">
                 <div class="r-size">
                     <img src="images/icon-baron-r.png" alt="">
-                    <span>0</span>
+                    <span class="redBaronk">0</span>
                     <img src="images/icon-dragon-r.png" alt="">
-                    <span>0</span>
+                    <span class="redDragonk">0</span>
                     <img src="images/icon-tower-r.png" alt="">
-                    <span>0</span>
+                    <span class="redTowerk">0</span>
                 </div>
                 <div class="l-size">
                     <img src="images/icon-kda.png" alt="">
-                    <span>0</span>|
-                    <span>0</span>|
-                    <span>0</span>
+                    <span class="redK">0</span>|
+                    <span class="redD">0</span>|
+                    <span class="redA">0</span>
                 </div>
             </div>
         </div>
