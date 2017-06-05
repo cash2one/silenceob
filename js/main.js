@@ -8,6 +8,10 @@ $(function() {
     });
     $("#getkey").click(function () {
         apikey = $("#apikey").val();
+        if (apikey == "") {
+            alert("APIKEY输入为空！！！");
+            return
+        }
         $("#apikey").fadeOut();
         $("#getkey").fadeOut(function () {
             $("#tips").text("已确认APIKEY，你输入的是"+apikey);
@@ -34,11 +38,17 @@ $(function() {
 
 
     //点击按钮开始运行
+    var cnTime = 0;
     $("#btn").click(function() {
+        cnTime++;
+        if (cnTime > 3) {
+            $("#tips").text("请求失败次数超过三次，请检查APIKEY或者网络链接是否正常！");
+            return
+        }
         $("#tips").text("初始化数据");
         init();
         var matchid = $("#matchid").val();
-        $("#tips").text("开始请求数据");
+        $("#tips").text("开始请求数据,当前为第"+cnTime+"次");
         $.ajax({
             url: "https://kr.api.riotgames.com/api/lol/KR/v2.2/match/" + matchid + "?includeTimeline=false&api_key="+apikey,
             success: function(data) {
@@ -47,6 +57,9 @@ $(function() {
                 redT = new Team(data, "red");
                 blueT.set(blueT);
                 redT.set(redT);
+            },
+            error:function (XMLHttpRequest, textStatus, errorThrown) {
+                $("#btn").click();
             }
         })
     });
@@ -176,15 +189,15 @@ $(function() {
             for (var i = 0; i < team.role.length; i++) {
                 //设置头像
                 $("." + team.size + "-team>li>.sumer>.top>.sumer-icon>img").eq(i).attr("src",
-                    "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/champion/" + team.getChaName(team[team.role[i]][0].championId) + ".png");
+                    "http://ddragon.leagueoflegends.com/cdn/7.11.1/img/champion/" + team.getChaName(team[team.role[i]][0].championId) + ".png");
                 //设置召唤师技能
                 var spells = $("." + team.size + "-team>li>.sumer>.top>.skill>.spells");
-                $(spells[i]).children("img").eq(0).attr("src", "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/" + team.getSpell(team[team.role[i]][0]["spell1Id"]) + ".png");
-                $(spells[i]).children("img").eq(1).attr("src", "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/spell/" + team.getSpell(team[team.role[i]][0]["spell2Id"]) + ".png");
+                $(spells[i]).children("img").eq(0).attr("src", "http://ddragon.leagueoflegends.com/cdn/7.11.1/img/spell/" + team.getSpell(team[team.role[i]][0]["spell1Id"]) + ".png");
+                $(spells[i]).children("img").eq(1).attr("src", "http://ddragon.leagueoflegends.com/cdn/7.11.1/img/spell/" + team.getSpell(team[team.role[i]][0]["spell2Id"]) + ".png");
                 //设置天赋基石
                 var masteryId = this.getMastery(team[team.role[i]][0].masteries);
                 var mastery = $("." + team.size + "-team>li>.sumer>.top>.skill>.mastery");
-                $(mastery[i]).children("img").attr("src", "http://ddragon.leagueoflegends.com/cdn/6.24.1/img/mastery/"+masteryId+".png");
+                $(mastery[i]).children("img").attr("src", "http://ddragon.leagueoflegends.com/cdn/7.11.1/img/mastery/"+masteryId+".png");
                 //设置召唤师姓名
                 $("." + team.size + "-team>li>.sumer>p").eq(i).text(this.data.participantIdentities[team[team.role[i]][0].index].player.summonerName);
                 //设置KDA数据
@@ -207,7 +220,7 @@ $(function() {
                     if (itemid == 0) {
                         continue;
                     }
-                    $(items).eq(i).children("li").eq(j).children("img").attr("src","http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/"+itemid+".png")
+                    $(items).eq(i).children("li").eq(j).children("img").attr("src","http://ddragon.leagueoflegends.com/cdn/7.11.1/img/item/"+itemid+".png")
                 }
                 for (var j = 0; j < 3 && j < team[team.role[i]][0].tag.length; j++) {
                     $("." + team.size + "-team>li>.kda>.king").eq(i).children(".king-item").eq(j).css("visibility","visible").text(team[team.role[i]][0].tag[j]);
@@ -284,7 +297,7 @@ $(function() {
                     for (var j = 0; j < mRole.length; j++) {
                         if (mRole[j].spell1Id != 3 && mRole[j].spell2Id != 3) {
                             that.ad = mRole.splice(j, 1);
-                            $("#tips").text("AD位置匹配完成");
+                            $("#tips").text($("#tips").text()+"-----AD位置匹配完成");
                             return;
                         }
                     }

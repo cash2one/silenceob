@@ -7,15 +7,14 @@
 ul,li{
 	list-style-type: none;
 }
-.top{
-	margin-top: 10px;
+.main-top{
 	select{
 		width: 100px;
 	}
 	#tips{
 		position: absolute;
-		right: 0px;
-		top: 12px;
+		right: 6px;
+		top: 0px;
 		overflow: hidden;
 	}
 }
@@ -24,6 +23,7 @@ ul,li{
 	width: 1730px;
 	margin:0 auto;
 	>.top{
+		margin-top: 10px;
 		height:90%;
 		display: flex;
 		.blue-team{
@@ -37,7 +37,7 @@ ul,li{
 				background-color: #a3cfec;
 				border:2px solid #3480c6;
 				margin:5px 0px;
-				padding:2px 6px;
+				padding:4px 6px 2px 6px;
 				.items{
 					float: left;
 					height: 100%;
@@ -193,6 +193,7 @@ ul,li{
 				flex:1;
 				background-color: #e2b6b3;
 				border: 2px solid #ee5a52;
+				padding:4px 6px 2px 6px;
 				.items{
 					float: left;
 					height: 100%;
@@ -340,10 +341,11 @@ ul,li{
 	}
 	>.bot{
 		height: 50px;
-		margin-top: 6px;
+		margin-top: 16px;
 		>div {
 			width:855px;
 			height: 100%;
+			background-color: #FFF;
 		}
 		.left {
 			float: left;

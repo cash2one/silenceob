@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   font-family: "微软雅黑";
 }
 
@@ -10,16 +11,13 @@ ul, li {
   list-style-type: none;
 }
 
-.top {
-  margin-top: 10px;
-}
-.top select {
+.main-top select {
   width: 100px;
 }
-.top #tips {
+.main-top #tips {
   position: absolute;
-  right: 0px;
-  top: 12px;
+  right: 6px;
+  top: 0px;
   overflow: hidden;
 }
 
@@ -29,38 +27,34 @@ ul, li {
   margin: 0 auto;
 }
 .container > .top {
+  margin-top: 10px;
   height: 90%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .container > .top .blue-team {
   height: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 10px;
 }
 .container > .top .blue-team > li {
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #a3cfec;
   border: 2px solid #3480c6;
   margin: 5px 0px;
-  padding: 2px 6px;
+  padding: 4px 6px 2px 6px;
 }
 .container > .top .blue-team > li .items {
   float: left;
@@ -72,12 +66,10 @@ ul, li {
   height: 100%;
   padding: 6px 0px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .container > .top .blue-team > li .items ul li {
   width: 33.3333%;
@@ -120,7 +112,6 @@ ul, li {
 .container > .top .blue-team > li .kda .king {
   height: 30px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 8px 0px;
@@ -128,7 +119,6 @@ ul, li {
   line-height: 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -136,7 +126,6 @@ ul, li {
   visibility: hidden;
   height: 100%;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0px 3px;
@@ -218,16 +207,13 @@ ul, li {
 .container > .top .red-team {
   height: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 10px;
@@ -235,11 +221,11 @@ ul, li {
 .container > .top .red-team > li {
   margin: 5px 0px;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #e2b6b3;
   border: 2px solid #ee5a52;
+  padding: 4px 6px 2px 6px;
 }
 .container > .top .red-team > li .items {
   float: left;
@@ -251,12 +237,10 @@ ul, li {
   height: 100%;
   padding: 6px 0px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .container > .top .red-team > li .items ul li {
   width: 33.3333%;
@@ -299,7 +283,6 @@ ul, li {
 .container > .top .red-team > li .kda .king {
   height: 30px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 8px 0px;
@@ -310,7 +293,6 @@ ul, li {
   visibility: hidden;
   height: 100%;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0px 3px;
@@ -392,11 +374,12 @@ ul, li {
 }
 .container > .bot {
   height: 50px;
-  margin-top: 6px;
+  margin-top: 16px;
 }
 .container > .bot > div {
   width: 855px;
   height: 100%;
+  background-color: #FFF;
 }
 .container > .bot .left {
   float: left;
