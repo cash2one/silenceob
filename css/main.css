@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "微软雅黑";
 }
 
@@ -30,25 +29,30 @@ ul, li {
   margin-top: 10px;
   height: 90%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 .container > .top .blue-team {
   height: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-right: 10px;
 }
 .container > .top .blue-team > li {
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #a3cfec;
@@ -66,10 +70,12 @@ ul, li {
   height: 100%;
   padding: 6px 0px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .container > .top .blue-team > li .items ul li {
   width: 33.3333%;
@@ -81,37 +87,38 @@ ul, li {
   margin: 0 auto;
   border-radius: 5px;
 }
-.container > .top .blue-team > li .data-box {
-  float: left;
-  height: 100%;
-  padding: 8px 0px;
-  margin: 0px 6px;
-}
-.container > .top .blue-team > li .data-box .data {
-  height: 100%;
-  width: 170px;
-  border: 2px solid #3480c6;
-  border-radius: 5px;
-  padding-left: 28px;
-  padding-top: 14px;
-  font-size: 24px;
-}
 .container > .top .blue-team > li .kda {
   float: left;
   height: 100%;
-  width: 250px;
+  width: 426px;
   padding: 3px 5px;
+  text-align: right;
+}
+.container > .top .blue-team > li .kda .tag {
+  float: left;
+}
+.container > .top .blue-team > li .kda .tag .tag-item {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+  width: 80px;
+  background-color: #b01d4d;
+  border-radius: 3px;
+  margin-top: 6px;
 }
 .container > .top .blue-team > li .kda .kda-info {
-  font-size: 40px;
+  font-size: 74px;
   font-weight: 900;
-  line-height: 40px;
-  text-align: center;
+  line-height: 74px;
   vertical-align: top;
+  margin-bottom: 16px;
+  display: inline-block;
 }
 .container > .top .blue-team > li .kda .king {
   height: 30px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 8px 0px;
@@ -119,6 +126,7 @@ ul, li {
   line-height: 30px;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
 }
@@ -126,6 +134,7 @@ ul, li {
   visibility: hidden;
   height: 100%;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0px 3px;
@@ -138,7 +147,7 @@ ul, li {
 }
 .container > .top .blue-team > li .kda .dps .dps-box {
   border: 2px solid #fff;
-  height: 25px;
+  height: 42px;
   background-color: #FFF;
 }
 .container > .top .blue-team > li .kda .dps .dps-box .dps-num {
@@ -147,12 +156,19 @@ ul, li {
   height: 100%;
   float: right;
 }
+.container > .top .blue-team > li .kda .dps .dps-box p {
+  float: right;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 40px;
+  padding-right: 4px;
+}
 .container > .top .blue-team > li .sumer {
   float: left;
   width: 200px;
   height: 100%;
   padding: 6px 0px;
-  margin-left: 8px;
+  margin-left: 6px;
 }
 .container > .top .blue-team > li .sumer .top {
   height: 80%;
@@ -207,13 +223,16 @@ ul, li {
 .container > .top .red-team {
   height: 100%;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: 10px;
@@ -221,6 +240,7 @@ ul, li {
 .container > .top .red-team > li {
   margin: 5px 0px;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   background-color: #e2b6b3;
@@ -237,10 +257,12 @@ ul, li {
   height: 100%;
   padding: 6px 0px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
 }
 .container > .top .red-team > li .items ul li {
   width: 33.3333%;
@@ -270,19 +292,36 @@ ul, li {
 .container > .top .red-team > li .kda {
   float: left;
   height: 100%;
-  width: 250px;
+  width: 426px;
   padding: 3px 5px;
+  text-align: left;
+}
+.container > .top .red-team > li .kda .tag {
+  float: right;
+}
+.container > .top .red-team > li .kda .tag .tag-item {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  height: 30px;
+  width: 80px;
+  background-color: #b01d4d;
+  border-radius: 3px;
+  margin-top: 6px;
 }
 .container > .top .red-team > li .kda .kda-info {
-  font-size: 40px;
+  font-size: 74px;
   font-weight: 900;
-  line-height: 40px;
-  text-align: center;
+  line-height: 74px;
   vertical-align: top;
+  margin-bottom: 16px;
+  display: inline-block;
+  text-align: left;
 }
 .container > .top .red-team > li .kda .king {
   height: 30px;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   margin: 8px 0px;
@@ -293,6 +332,7 @@ ul, li {
   visibility: hidden;
   height: 100%;
   -webkit-box-flex: 1;
+  -webkit-flex: 1;
       -ms-flex: 1;
           flex: 1;
   margin: 0px 3px;
@@ -301,11 +341,11 @@ ul, li {
   color: #fff;
 }
 .container > .top .red-team > li .kda .dps p {
-  text-align: left;
+  text-align: right;
 }
 .container > .top .red-team > li .kda .dps .dps-box {
   border: 2px solid #fff;
-  height: 25px;
+  height: 42px;
   background-color: #FFF;
 }
 .container > .top .red-team > li .kda .dps .dps-box .dps-num {
@@ -313,6 +353,13 @@ ul, li {
   width: 50%;
   height: 100%;
   float: left;
+}
+.container > .top .red-team > li .kda .dps .dps-box p {
+  float: left;
+  font-size: 20px;
+  display: inline-block;
+  line-height: 40px;
+  padding-left: 4px;
 }
 .container > .top .red-team > li .sumer {
   float: left;

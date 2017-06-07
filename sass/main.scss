@@ -62,32 +62,32 @@ ul,li{
 						}
 					}
 				}
-				.data-box{
-					float: left;
-					height: 100%;
-					padding:8px 0px;
-					margin:0px 6px;
-					.data {
-					    height: 100%;
-					    width: 170px;
-					    border: 2px solid #3480c6;
-					    border-radius: 5px;
-					    padding-left: 28px;
-					    padding-top: 14px;
-					    font-size: 24px;
-					}
-				}
 				.kda{
 					float: left;
 					height: 100%;
-					width:250px;
+					width:426px;
 					padding:3px 5px;
+					text-align: right;
+					.tag{
+						float: left;
+						.tag-item{
+							color: white;
+							text-align: center;
+							font-size: 20px;
+							height: 30px;
+							width: 80px;
+							background-color: #b01d4d;
+							border-radius: 3px;
+							margin-top: 6px;
+						}
+					}
 					.kda-info{
-						font-size: 40px;
+						font-size: 74px;
 						font-weight: 900;
-						line-height: 40px;
-						text-align: center;
+						line-height: 74px;
 						vertical-align:top;
+						margin-bottom: 16px;
+						display: inline-block;
 					}
 					.king {
 						height: 30px;
@@ -112,13 +112,20 @@ ul,li{
 						}
 						.dps-box{
 							border: 2px solid #fff;
-							height:25px;
+							height:42px;
 							background-color: #FFF;
 							.dps-num{
 								background-color: #ee5a52;
 								width:50%;
 								height:100%;
 								float: right;
+							}
+							p{
+								float: right;
+								font-size: 20px;
+								display: inline-block;
+								line-height: 40px;
+								padding-right: 4px;
 							}
 						}
 					}
@@ -128,7 +135,7 @@ ul,li{
 					width: 200px;
 					height: 100%;
 					padding: 6px 0px;
-					margin-left: 8px;
+					margin-left: 6px;
 					.top {
 						height: 80%;
 						.skill{
@@ -236,14 +243,30 @@ ul,li{
 				.kda{
 					float: left;
 					height: 100%;
-					width:250px;
+					width:426px;
 					padding:3px 5px;
+					text-align: left;
+					.tag{
+						float: right;
+						.tag-item{
+							color: white;
+							text-align: center;
+							font-size: 20px;
+							height: 30px;
+							width: 80px;
+							background-color: #b01d4d;
+							border-radius: 3px;
+							margin-top: 6px;
+						}
+					}
 					.kda-info{
-						font-size: 40px;
+						font-size: 74px;
 						font-weight: 900;
-						line-height: 40px;
-						text-align: center;
+						line-height: 74px;
 						vertical-align:top;
+						margin-bottom: 16px;
+						display: inline-block;
+						text-align: left;
 					}
 					.king {
 						height: 30px;
@@ -263,17 +286,24 @@ ul,li{
 					}
 					.dps{
 						p{
-							text-align: left;
+							text-align: right;
 						}
 						.dps-box{
 							border: 2px solid #fff;
-							height:25px;
+							height:42px;
 							background-color: #FFF;
 							.dps-num{
 								background-color: #ee5a52;
 								width:50%;
 								height:100%;
 								float: left;
+							}
+							p{
+								float: left;
+								font-size: 20px;
+								display: inline-block;
+								line-height: 40px;
+								padding-left: 4px;
 							}
 						}
 					}
