@@ -1,6 +1,6 @@
 $(function() {
-    var blueT = null;
-    var redT = null;
+    window.blueT = null;
+    window.redT = null;
     var apikey = "";
     $("#bgSetB").click(function () {
         var bgcolor = $("#bgset").val();
@@ -50,7 +50,7 @@ $(function() {
         var matchid = $("#matchid").val();
         $("#tips").text("开始请求数据,当前为第"+cnTime+"次");
         $.ajax({
-            url: "https://kr.api.riotgames.com/api/lol/KR/v2.2/match/" + matchid + "?includeTimeline=false&api_key="+apikey,
+            url: "https://kr.api.riotgames.com/lol/match/v3/matches/" + matchid + "?api_key="+apikey,
             success: function(data) {
                 $("#tips").text("请求数据成功！");
                 blueT = new Team(data, "blue");
@@ -222,8 +222,8 @@ $(function() {
                     }
                     $(items).eq(i).children("li").eq(j).children("img").attr("src","http://ddragon.leagueoflegends.com/cdn/7.11.1/img/item/"+itemid+".png")
                 }
-                for (var j = 0; j < 3 && j < team[team.role[i]][0].tag.length; j++) {
-                    $("." + team.size + "-team>li>.kda>.king").eq(i).children(".king-item").eq(j).css("visibility","visible").text(team[team.role[i]][0].tag[j]);
+                for (var j = 0; j < 2 && j < team[team.role[i]][0].tag.length; j++) {
+                    $("." + team.size + "-team>li>.kda>.tag").eq(i).children(".tag-item").eq(j).css("visibility","visible").text(team[team.role[i]][0].tag[j]);
                     
                 }
 

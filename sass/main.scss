@@ -71,6 +71,7 @@ ul,li{
 					.tag{
 						float: left;
 						.tag-item{
+							visibility:hidden;
 							color: white;
 							text-align: center;
 							font-size: 20px;
@@ -249,6 +250,7 @@ ul,li{
 					.tag{
 						float: right;
 						.tag-item{
+							visibility:hidden;
 							color: white;
 							text-align: center;
 							font-size: 20px;
