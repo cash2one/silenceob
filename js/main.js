@@ -43,6 +43,7 @@ $(function() {
         cnTime++;
         if (cnTime > 3) {
             $("#tips").text("请求失败次数超过三次，请检查APIKEY或者网络链接是否正常！");
+            cnTime==0;
             return
         }
         $("#tips").text("初始化数据");
@@ -52,6 +53,7 @@ $(function() {
         $.ajax({
             url: "https://kr.api.riotgames.com/lol/match/v3/matches/" + matchid + "?api_key="+apikey,
             success: function(data) {
+                cnTime==0;
                 $("#tips").text("请求数据成功！");
                 blueT = new Team(data, "blue");
                 redT = new Team(data, "red");
@@ -178,6 +180,7 @@ $(function() {
             this.check();
         },
         set: function(team) {
+            $("." + team.size + "-team>li>.kda>.tag>.tag-item").css("visibility","hidden");
             //设置塔龙杀
             $("."+this.size+"Baronk").text(this.barlonK);
             $("."+this.size+"Dragonk").text(this.dragonK);
@@ -206,6 +209,7 @@ $(function() {
                 $("." + team.size + "-team>li>.kda>.dps>p").eq(i).text("伤害量："+team[team.role[i]][0].stats.totalDamageDealtToChampions);
                 //设置dps进度条
                 $("." + team.size + "-team>li>.kda>.dps>.dps-box>.dps-num").eq(i).css("width",team[team.role[i]][0].stats.totalDamageDealtToChampions/this.maxD*80+"%");
+                $("." + team.size + "-team>li>.kda>.dps>.dps-box>p").eq(i).text(team[team.role[i]][0].stats.totalDamageDealtToChampions)
                 var dateP = $("." + team.size + "-team>li>.data-box>.data");
                 //设置等级
                 $(dateP[i]).children("p").eq(0).text("等级："+team[team.role[i]][0].stats.champLevel);
