@@ -203,7 +203,9 @@ $(function() {
                 //设置天赋基石
                 var masteryId = this.getMastery(team[team.role[i]][0].masteries);
                 var mastery = $("." + team.size + "-team>li>.sumer>.top>.skill>.mastery");
-                $(mastery[i]).children("img").attr("src", "http://ddragon.leagueoflegends.com/cdn/7.14.1/img/mastery/"+masteryId+".png");
+                if (masteryId) {
+                    $(mastery[i]).children("img").attr("src", "http://ddragon.leagueoflegends.com/cdn/7.14.1/img/mastery/"+masteryId+".png");
+                }
                 //设置召唤师姓名
                 $("." + team.size + "-team>li>.sumer>p").eq(i).text(this.data.participantIdentities[team[team.role[i]][0].index].player.summonerName);
                 //设置KDA数据
